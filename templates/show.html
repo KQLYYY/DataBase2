@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>KV-51 Martinovets</title>
+</head>
+
+<body>
+<h3>KV-51 Martinovets N.V</h3>
+
+<div class="col-lg-3">
+    <label><h4>Choose table for view</h4></label>
+    <form action="/show" method="post">
+        {%  csrf_token %}
+        <select type="text" style="margin-top:0px;width:50%" class="btn btn-default waves-effect waves-light " name="table_name">
+            <option>Order</option>
+            <option>Client</option>
+            <option>Product</option>
+            <option>Store</option>
+        </select>
+        <button type="submit" style="margin-top:0px" class="btn btn-primary waves-effect waves-light " value="submit">View</button>
+    </form>
+</div>
+
+{% if table_name == 'Order' %}
+    <div class="col-lg-3">
+        <label><h4>Choose row for delete</h4></label>
+        <form action="/delete" method="post">
+            {%  csrf_token %}
+            <select type="text" style="margin-top:0px;width:50%" class="btn btn-default waves-effect waves-light " name="row_id">
+                {% if rows %}
+                    {% for row in rows %}
+                        <option value="{{ row }}">{{row}}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+            <button type="submit" style="margin-top:0px" class="btn btn-primary waves-effect waves-light " value="submit">Delete</button>
+        </form>
+    </div>
+    <a href= "/create"><h4>Add new</h4></a>
+    <a href= "/update"><h4>Update info</h4></a>
+    <form action="/searchdigit" method="post">
+        {%  csrf_token %}
+        <input type="hidden" name="tablename" value="{{ table_name }}">
+        <div class="col-lg-5">
+            <input type="text" name="start"  placeholder="First id">
+        </div>
+        <div class="col-lg-5">
+            <input type="text" name="end"  placeholder="Last id">
+        </div>
+        <div class="col-lg-2">
+            <button type="submit" style="margin-top:0px" class="btn btn-primary waves-effect waves-light" value="submit">Search</button>
+        </div>
+    </form>
+{% endif %}
+<div class="col-lg-12">
+    <table class="table table-striped table-bordered" style="width:100%">
+        <tr><pre style="text-align: center;">Current table : {{ table_name }}</pre></tr>
+        <thead>
+        <tr>
+            {% for col in cols %}
+                <td>{{ col.0 }}</td>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% if rows %}
+            <td><strong>{{desc.0.0}}</strong></td><td><strong>{{desc.1.0}}</strong></td><td><strong>{{desc.2.0}}</strong></td><td><strong>{{desc.3.0}}</strong></td><td><strong>{{desc.4.0}}</strong></td><td><strong>{{desc.5.0}}</strong></td><td><strong>{{desc.6.0}}</strong></td><td><strong>{{desc.7.0}}</strong></td><td><strong>{{desc.8.0}}</strong></td>
+            {% for row in rows %}
+                <tr>
+                    {% for data in row %}
+                        <td>{{ data }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
+
+

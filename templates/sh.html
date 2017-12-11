@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <form action="/add" method="post">
+        {%  csrf_token %}
+        <label><h4>Choose Name of Product</h4></label>
+        <select type="text" style="margin-top:0px;width:50%" class="btn btn-default waves-effect waves-light " name="row_id">
+            {% if rows %}
+                {% for row in rows %}
+                    <option value="{{ row }}">{{row}}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+        <label><h4>Who you are?</h4></label>
+        <select type="text" style="margin-top:0px;width:50%" class="btn btn-default waves-effect waves-light " name="row1_id">
+            {% if rows1 %}
+                {% for row1 in rows1 %}
+                    <option value="{{ row1 }}">{{row1}}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+        <label><h4>Choose Store</h4></label>
+        <select type="text" style="margin-top:0px;width:50%" class="btn btn-default waves-effect waves-light " name="row2_id">
+            {% if rows2 %}
+                {% for row2 in rows2 %}
+                    <option value="{{ row2}}">{{row2}}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+        <button type="submit" style="margin-top:0px" class="btn btn-primary waves-effect waves-light " value="submit">GO</button>
+    </form>
+
+</head>
+<body>
+
+</body>
+</html>

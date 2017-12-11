@@ -1,0 +1,123 @@
+{
+  "Store": [
+    {
+      "idStore": 1,
+      "Name": "Rozetka",
+      "Adress": "Shevcenko 1a",
+      "Email": "rozetka@gmail.com"
+    },
+    {
+      "idStore": 2,
+      "Name": "Metro",
+      "Adress": "Shevcenko 2a",
+      "Email": "metro@gmail.com"
+    },
+    {
+      "idStore": 3,
+      "Name": "Ashan",
+      "Adress": "Shevcenko 3a",
+      "Email": "ashan@gmail.com"
+    },
+    {
+      "idStore": 4,
+      "Name": "ATB",
+      "Adress": "Shevcenko 4a",
+      "Email": "atb@gmail.com"
+    },
+    {
+      "idStore": 5,
+      "Name": "Silpo",
+      "Adress": "Shevcenko 5a",
+      "Email": "silpo@gmail.com"
+    }   
+  ],
+  "Client": [
+    {
+      "idClient": 1,
+      "FName": "Mykola",
+      "SurName": "Martinovets",
+      "PhoneNumber": "044-661",
+      "Adress": "Aviatoriv 1a"
+    },
+    {
+      "idClient": 2,
+      "FName": "Lev",
+      "SurName": "Bazilskii",
+      "PhoneNumber": "044-662",
+      "Adress": "Aviatoriv 2a"
+    },
+    {
+      "idClient": 3,
+      "FName": "Vad",
+      "SurName": "Maslov",
+      "PhoneNumber": "044-663",
+      "Adress": "Aviatoriv 3a"
+    },
+    {
+      "idClient": 4,
+      "FName": "Igor",
+      "SurName": "Tymoshenko",
+      "PhoneNumber": "044-664",
+      "Adress": "Aviatoriv 4a"
+    },
+    {
+      "idClient": 5,
+      "FName": "Bogdan",
+      "SurName": "Katuha",
+      "PhoneNumber": "044-665",
+      "Adress": "Aviatoriv 5a"
+    }   
+  ],
+  "Product": [
+    {
+      "idProduct": 1,
+      "Name": "Merlot",
+      "Manuf": "Villa Mare",
+      "ManufCountry": "Ukraine",
+      "Category": "Wine",
+      "Type": "Dry",
+      "Capacity": "0.75",
+      "Price": "75"
+    },
+      {
+      "idProduct": 2,
+      "Name": "Vermouth Bianco",
+      "Manuf": "Fiorelli",
+      "ManufCountry": "Italy",
+      "Category": "Vermouth",
+      "Type": "Sweet",
+      "Capacity": "1",
+      "Price": "99"
+    },
+      {
+      "idProduct": 3,
+      "Name": "Silver cool",
+      "Manuf": "Hortica",
+      "ManufCountry": "Ukraine",
+      "Category": "Vodka",
+      "Type": "Pure",
+      "Capacity": "0.1",
+      "Price": "16"
+    },
+          {
+      "idProduct": 4,
+      "Name": "Silver cool",
+      "Manuf": "Hortica",
+      "ManufCountry": "Ukraine",
+      "Category": "Vodka",
+      "Type": "Pure",
+      "Capacity": "0.5",
+      "Price": "60"
+    },
+          {
+      "idProduct": 5,
+      "Name": "Silver cool",
+      "Manuf": "Hortica",
+      "ManufCountry": "Ukraine",
+      "Category": "Vodka",
+      "Type": "Pure",
+      "Capacity": "1",
+      "Price": "20"
+    }
+  ]
+}
